@@ -3,6 +3,7 @@ name: CI Pipeline V1
 on:
   push:
     branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -28,3 +29,4 @@ jobs:
           node index.js &
           sleep 5
           curl http://localhost:3000/health
+
